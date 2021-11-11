@@ -16,3 +16,10 @@ class Banner(models.Model):
 
     def __str__(self):
         return self.description
+
+class Brand(models.Model):
+    image = models.ImageField(upload_to = "brands", null = False)
+    brand = models.CharField(max_length = 200)
+    activated = models.BooleanField()
+    def __str__(self):
+        return self.brand
